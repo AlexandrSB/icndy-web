@@ -1,0 +1,19 @@
+@function em($target, $context: $font-size-base) 
+  @if $target == 0 
+    @return 0  
+  @return $target / $context + 0em
+
+
+@function cp($target, $context: $center-width)
+  @if $target == 0
+    @return 0
+  @return $target / $context * 100%
+
+
+@mixin reset-btn() 
+  border: none
+  background: none
+  outline: none
+  margin: 0px
+  padding: 0px
+  cursor: pointer
