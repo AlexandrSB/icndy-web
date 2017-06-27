@@ -17,3 +17,15 @@
   margin: 0px
   padding: 0px
   cursor: pointer
+
+@mixin user-select
+  -ms-user-select: none 
+  -moz-user-select: none 
+  -webkit-user-select: none
+  user-select: none
+
+@mixin background-size($size, $size1)
+  -ms-background-size: $size $size1
+  -moz-background-size: $size $size1
+  -webkit-background-size: $size $size1
+  background-size: $size $size1

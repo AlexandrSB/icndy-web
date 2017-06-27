@@ -1,3 +1,4 @@
+@i://github.com/AlexandrSB/icndy-web.gitport;
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -20,22 +21,37 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../font/Proxima Nova Bold.otf");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../font/Proxima Nova Semibold.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../font/Proxima Nova Light.otf");
+  font-weight: normal;
+  font-style: italic; }
 html,
 body,
 #wrapper,
 header,
 section,
+main,
 footer {
   display: block;
-  margin: 0 auto;
-  height: 100%; }
+  margin: 0 auto; }
 
 body > #wrapper {
   height: auto;
   min-height: 100%; }
 
 body {
-  font-size: 20px; }
+  font-size: 20pt; }
 
 body,
 input,
@@ -47,14 +63,30 @@ textarea {
 
 body {
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%;
+  min-width: 320px; }
 
 header {
-  width: 1700px;
-  height: 1051px;
-  border-bottom: 1px solid #e6e6e6;
-  padding-top: 40px;
-  background: url("../pictures/header_background.png") no-repeat; }
+  position: relative;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 2% 5%;
+  background: url("../pictures/header_background.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; }
+  header .down-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 2%; }
+
+.header-box {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto; }
 
 .header-logo {
   -ms-user-select: none;
@@ -66,7 +98,6 @@ header {
   width: 225px;
   height: 60px;
   padding-top: 30px;
-  margin-left: 100px;
   color: #7c7c7a;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -81,16 +112,17 @@ header {
 
 .header-menu-box {
   float: right;
-  margin: 0 100px 0 0;
-  padding: 30px 0; }
+  padding: 30px 0;
+  margin: 0; }
   .header-menu-box li {
     display: inline;
     margin: 20px; }
   .header-menu-box a {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 18pt;
+    font-family: proxima-nova, sans-serif;
+    font-weight: bold;
     letter-spacing: 10px;
     color: white; }
   .header-menu-box a:hover {
@@ -101,8 +133,14 @@ header {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  position: absolute;
+  top: 46%;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  font-family: proxima-nova, sans-serif;
   cursor: default;
-  margin: 350px auto 0; }
+  margin: 0; }
   .header-caption p {
     margin: 0 auto;
     text-align: center;
@@ -116,6 +154,204 @@ header {
     color: #f84545;
     font-size: 25px;
     letter-spacing: 15px;
-    font-weight: 600; }
+    font-weight: bold;
+    font-style: normal; }
+
+.section_up {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1700px;
+  height: 100vh;
+  padding: 5vh; }
+  .section_up ul {
+    display: inline-block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%; }
+  .section_up li {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 31%;
+    min-width: 320px;
+    height: 42vh;
+    margin: 0% 0% 0% 3.5%;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .section_up li:first-child {
+    float: left;
+    width: 65.5%;
+    margin-left: 0%;
+    margin-bottom: 4vh;
+    height: 44vh;
+    background-image: url("../pictures/section_up1.png"); }
+    .section_up li:first-child .info {
+      padding: 45px; }
+    .section_up li:first-child p {
+      font-size: 200%; }
+  .section_up li:nth-child(2), .section_up li:nth-child(3) {
+    height: 20vh;
+    margin-bottom: 4vh; }
+  .section_up li:nth-child(2) {
+    background-image: url(../pictures/section_up2.png); }
+    .section_up li:nth-child(2) img {
+      width: 40px; }
+  .section_up li:nth-child(3) {
+    background-image: url(../pictures/section_up3.png); }
+  .section_up li:nth-child(4) {
+    background-image: url(../pictures/section_up4.png); }
+  .section_up li:nth-child(5) {
+    background-image: url(../pictures/section_up5.png);
+    background-position: center 31%;
+    background-size: auto; }
+    .section_up li:nth-child(5) img {
+      width: 25%; }
+  .section_up li:nth-last-child(1) {
+    margin-left: 0%;
+    background-image: url(../pictures/section_up6.png); }
+  .section_up a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(26, 26, 26, 0.5), rgba(13, 13, 13, 0.1)); }
+  .section_up .info {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    position: absolute;
+    display: inline-block;
+    width: 80%;
+    bottom: 0%;
+    left: 0%;
+    padding: 30px; }
+    .section_up .info img {
+      width: 18%; }
+    .section_up .info p {
+      margin: 0;
+      padding-top: 0.3em;
+      font-family: proxima-nova, sans-serif;
+      font-size: 150%;
+      text-align: left;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.4em; }
+
+.section_down {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 90vh;
+  background-color: #262626; }
+  .section_down .text_block {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    margin: auto;
+    padding: 0px;
+    top: 0px;
+    bottom: 0px; }
+    .section_down .text_block p {
+      margin: 0px;
+      padding: 0px;
+      font-family: proxima-nova, sans-serif;
+      line-height: 200%;
+      text-transform: uppercase; }
+    .section_down .text_block .text_up {
+      color: #fff;
+      font-size: 40pt;
+      line-height: 70pt;
+      letter-spacing: 0.6em;
+      font-weight: normal;
+      font-style: normal; }
+    .section_down .text_block .text_down {
+      color: #f33;
+      font-size: 24pt;
+      line-height: 75pt;
+      letter-spacing: 0.4em;
+      font-weight: bold; }
+
+.down_image {
+  float: left;
+  width: 25%;
+  height: 45vh;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.down_image1 {
+  background-image: url(../pictures/section_down1.png); }
+
+.down_image2 {
+  background-image: url(../pictures/section_down2.png); }
+
+.down_image3 {
+  background-image: url(../pictures/section_down3.png); }
+
+.down_image4 {
+  background-image: url(../pictures/section_down4.png); }
+
+.down_image5 {
+  background-image: url(../pictures/section_down5.png); }
+
+.down_image6 {
+  background-image: url(../pictures/section_down6.png); }
+
+.down_image7 {
+  background-image: url(../pictures/section_down7.png); }
+
+.down_image8 {
+  background-image: url(../pictures/section_down8.png); }
+
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1700px;
+  min-weidth: 360px;
+  height: 10vh;
+  margin: 0 auto;
+  padding: 0px 7%; }
+  footer ul {
+    display: inline-block;
+    width: 80%;
+    margin-top: 3%;
+    padding: 0px; }
+  footer li {
+    display: inline-block;
+    margin-left: 2%;
+    list-style: none;
+    color: #1a1a1a;
+    font-size: 18pt;
+    letter-spacing: 0.3em;
+    line-height: 40pt;
+    font-family: proxima-nova, sans-serif;
+    text-transform: uppercase; }
+  footer li:nth-child(1) {
+    margin-left: 0px; }
+  footer a {
+    text-decoration: none;
+    color: #1a1a1a; }
+  footer .footer_logo {
+    display: inline-block;
+    width: 20%;
+    float: right;
+    margin-top: 3%; }
+    footer .footer_logo img {
+      float: right;
+      margin-left: 15%;
+      margin-top: 0.5em;
+      line-height: 40pt; }
 
 /*# sourceMappingURL=style.css.map */

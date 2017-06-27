@@ -1,94 +1,96 @@
 ﻿.section_up
-  display: inline-block
-  width: 90%
-  padding: 5% 
-
-  p
-    +user-select
-    margin: 0
-    padding: 20px
-    font-family: proxima-nova, sans-serif
-    font-size: 20px
-    text-align: left
-    color: #fff
-    text-transform: uppercase
-    letter-spacing: 10px
-
-.body_image1
-  position: relative
   box-sizing: border-box
-  display: inline-block
-  float: left
-  margin-bottom: 2%
-  width: 66%
-  height: 653px
-  padding: 350px 0 50px 50px
-  background: url(../pictures/section_up1.png) no-repeat
-  background-size: 100% auto
+  margin: 0 auto
+  width: 100%
+  max-width: 1700px
+  height: 100vh
+  padding: 5vh
 
-  img
-    position: absolute
-    height: auto
-    bottom: 110px
+  ul
+    display: inline-block
+    width: 100%
+    padding: 0%
+    margin: 0%
 
-  p
+  li
+    position: relative
+    display: inline-block
+    box-sizing: border-box
+    width: 31%
+    min-width: 320px
+    height: 42vh
+    margin: 0% 0% 0% 3.5%
+    float: right
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+  li:first-child
+    float: left
+    width: 65.5%
+    margin-left: 0% 
+    margin-bottom: 4vh
+    height: 44vh
+    background-image: url("../pictures/section_up1.png")
+
+    .info
+      padding: 45px
+
+    p
+      font-size: 200%
+
+  li:nth-child(2), li:nth-child(3)
+    height: 20vh 
+    margin-bottom: 4vh
+  
+  li:nth-child(2)
+    background-image: url(../pictures/section_up2.png)
+
+    img
+      width: 40px
+
+  li:nth-child(3)
+    background-image: url(../pictures/section_up3.png)
+
+  li:nth-child(4)
+    background-image: url(../pictures/section_up4.png)
+
+  li:nth-child(5)
+    background-image: url(../pictures/section_up5.png)
+    background-position: center 31%
+    background-size: auto
+
+    img
+      width: 25%
+
+  li:nth-last-child(1)
+    margin-left: 0%
+    background-image: url(../pictures/section_up6.png)
+
+  a
+    position: relative
+    display: block
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(to top, rgba(26,26,26,0.5), rgba(13,13,13,0.1))
+
+  .info
     +user-select
-    cursor: default
     position: absolute
-    padding: 0px
-    margin: 0px
-    font-family: proxima-nova, sans-serif
-    font-size: 240%
-    line-height: 20px 
-    letter-spacing: 20px
-    text-align: left
-    bottom: 45px
+    display: inline-block
+    width: 80%
+    bottom: 0%
+    left: 0%
+    padding: 30px
 
-.body_image
-  position: relative
-  box-sizing: border-box
-  display: inline-block
-  float: right
-  margin: 0px 0px 2% 2%
-  width: 32%
-  height: 311px
-  padding: 120px 40px 40px 40px
-  +background-size(auto, auto)
-
-  img
-    position: absolute
-    width: auto
-    height: 75px
-    bottom: 110px
-
-  p
-    +user-select
-    cursor: default
-    position: absolute
-    width: 55%
-    padding: 0px
-    margin: 0px
-    font-family: proxima-nova, sans-serif
-    font-size: 150%
-    line-height: 35px 
-    text-align: left
-    bottom: 25px
-
-.body_image2 
-  background: url(../pictures/section_up2.png) no-repeat left center
-
-.body_image3
-  background: url(../pictures/section_up3.png) no-repeat left center
-
-.body_image4
-  background: url(../pictures/section_up4.png) no-repeat center center
-  height: 585px
-
-.body_image5
-  background: url(../pictures/section_up5.png) no-repeat center 30%
-  height: 585px
-
-.body_image6
-  background: url(../pictures/section_up6.png) no-repeat center center
-  height: 585px
-  margin-left: 0px
+    img
+      width: 18%
+    p
+      margin: 0
+      padding-top: .3em
+      font-family: proxima-nova, sans-serif
+      font-size: 150% 
+      text-align: left
+      color: #fff
+      text-transform: uppercase
+      letter-spacing: .4em 

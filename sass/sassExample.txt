@@ -1,0 +1,3 @@
+sass input.scss output.css     # convert files
+sass --watch input.scss:output.css  # watching files
+sass --watch app/sass:public/stylesheets    # watching folders 
